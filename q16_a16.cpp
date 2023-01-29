@@ -1,28 +1,45 @@
 #include <iostream>
 using namespace std;
-
 int main()
 {
-    int a;
+    int a,b,c,d;
     cin>>a;
-    int b = 1;
-    for(int i =1;i<=a;i++){
-        for(int j = 1; j<=((2*a)-1);j++){
-            if(j>i&&j<((2*a)-i)){
-                cout<<"  ";
+    for(int i = 1;i<=a;i++){
+        c=1;
+        b=(i);
+        d=(i-1);
+        for(int j = 1;j<=a;j++){
+            if(j<=i){
+                cout<<" "<<c<<" ";
+                c=c+1;
             }
             else{
-                cout<<b<<" ";
-                
+                cout<<"   ";
             }
             
+           
         }
-        cout<<endl;
-        b=b+1;
+        for(int y =a+1;y<=(2*a)-1;y++){
+            if((i+y)>=(2*a)&&i!=a){
+                cout<<" "<<b<<" ";
+                b=b-1;
+            }
+            else if(i==a){
+                cout<<" "<<d<<" ";
+                d=d-1;
+                
+            }
+            else{
+                cout<<"   ";
+            }
+        }
+            
+            
         
+        
+        cout<<endl;
         
     }
-    
 
     return 0;
 }
